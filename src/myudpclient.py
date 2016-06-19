@@ -11,7 +11,7 @@ print ">>> sent data"
 client.sendto("AAABBBBCCC", (target_host, target_port))
 
 # receive data 
-print ">>> receive data"
+print ">>> receive data", client.__doc__
 data, addr = client.recvfrom(4096)
 
 print data
