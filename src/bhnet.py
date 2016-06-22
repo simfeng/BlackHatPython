@@ -49,22 +49,24 @@ def client_sender(buffer):
 
             while recv_len:
                 data = client.recv(4096)
-                recv_data = len(data)
+                recv_len = len(data)
+                response += data
     
                 if recv_len < 4096:
                     break
 
-            print response
+            # print response
 
             # 等待更多数据输入
-            buffer = raw_input("")
+            buffer = raw_input()
             buffer += "\n"
 
             # 发送出去
+            print ">>> buffer ", buffer
             client.send(buffer)
 
-    except:
-        print "[*] Exception Exiting"
+    except Exception, e:
+        print "[*] Exception Exiting", e
         client.close()
 
 def server_loop():
@@ -193,7 +195,7 @@ if __name__ == "__main__":
             command = True
         elif o in ("-u","--upload"):
             upload_destination = a
-        elif o in ("t","--target"):
+        elif o in ("-t","--target"):
             target = a
         elif o in ("-p", "--port"):
             port = int(a)
