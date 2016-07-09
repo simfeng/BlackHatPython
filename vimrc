@@ -14,6 +14,7 @@ set expandtab  " tabs are spaces
 " UI Config
 
 set number
+set relativenumber
 
 set showcmd
 
