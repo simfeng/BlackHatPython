@@ -28,6 +28,19 @@ set lazyredraw " redraw screen only when we need to.
 
 set showmatch " hightlight matching [{()}]
 
+" Leader Shortcuts
+
+let mapleader=","  " leader is comma
+" TODO : maybe not worked
+
+" jk is escap
+" that's amazing
+inoremap jk <esc>
+
+" toggle gundo
+" nnoremap <leader>u :GundoToggle<CR>
+
+
 
 " Searching 
 
@@ -81,18 +94,5 @@ nnoremap k gk
 
 " highlight last inserted text
 nnoremap gV `[v`]
-
-
-" Leader Shortcuts
-
-let mapleader=","  " leader is comma
-" TODO : maybe not worked
-
-" jk is escap
-" that's amazing
-inoremap jk <esc>
-
-" toggle gundo
-" nnoremap <leader>u :GundoToggle<CR>
 
 
