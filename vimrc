@@ -14,7 +14,7 @@ set expandtab  " tabs are spaces
 " UI Config
 
 set number
-set relativenumber
+" set relativenumber
 
 set showcmd
 
@@ -31,7 +31,7 @@ set showmatch " hightlight matching [{()}]
 " Leader Shortcuts
 
 let mapleader=","  " leader is comma
-" TODO : maybe not worked
+" map leader key must before where use leader key , or won't work
 
 " jk is escap
 " that's amazing
