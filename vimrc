@@ -95,4 +95,5 @@ nnoremap k gk
 " highlight last inserted text
 nnoremap gV `[v`]
 
-
+" 回到上次离开的位置
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
