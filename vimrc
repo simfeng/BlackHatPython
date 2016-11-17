@@ -22,6 +22,8 @@ set cursorline " hightlight current line
 
 filetype indent on " load filetype-specific indent files
 
+filetype plugin indent on
+
 set wildmenu " visual autocomplete for command  menu
 
 set lazyredraw " redraw screen only when we need to.
@@ -97,3 +99,5 @@ nnoremap gV `[v`]
 
 " 回到上次离开的位置
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+set backspace=indent,eol,start   "problem: http://vim.wikia.com/wiki/Backspace_and_delete_problems
